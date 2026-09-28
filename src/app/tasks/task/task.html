@@ -1,0 +1,17 @@
+<!-- <article>
+    <h2>Task Title</h2>
+    <time>Time</time>
+    <p>Summary</p>
+    <P class="actions">
+        <button>Complete</button>
+    </P>
+</article> -->
+
+<article>
+    <h2>{{task.title}}</h2>
+    <time>{{task.dueDate}}</time>
+    <p>{{task.summary}}</p>
+    <p class="actions">
+        <button (click)="completeTask()">Complete</button>
+    </p>
+</article>

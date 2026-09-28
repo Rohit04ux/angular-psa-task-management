@@ -1,0 +1,130 @@
+<app-header></app-header>
+
+<!-- <main>
+  <div class="content">
+    <ul id="users">
+      <ul>
+          <app-user 
+              [id]="users[0].id"
+              [avatar]="users[0].avatar" 
+              [name]="users[0].name"
+              (select)="onSelectUser($event)"
+          />
+      </ul>
+      <ul>
+          <app-user
+              [id]="users[1].id" 
+              [avatar]="users[1].avatar" 
+              [name]="users[1].name"
+              (select)="onSelectUser($event)" 
+          />
+      </ul>
+      <ul>
+          <app-user 
+              [id]="users[2].id" 
+              [avatar]="users[2].avatar" 
+              [name]="users[2].name"
+              (select)="onSelectUser($event)" 
+          />
+      </ul>
+      <ul>
+          <app-user 
+              [id]="users[3].id" 
+              [avatar]="users[3].avatar" 
+              [name]="users[3].name"
+              (select)="onSelectUser($event)" 
+          />
+      </ul>
+    </ul>
+
+    <div class="tasks">
+      <app-tasks [name]="selectedUser.name" />
+    </div>
+
+  </div>
+</main> -->
+
+
+<!-- ---------------------------------------------------- -->
+<!-- <main>
+  <div class="content">
+    <ul id="users">
+      <ul>
+          <app-user 
+              [user]="users[0]"
+              (select)="onSelectUser($event)"
+          />
+      </ul>
+      <ul>
+          <app-user 
+              [user]="users[1]"
+              (select)="onSelectUser($event)"
+          />
+      </ul>
+      <ul>
+          <app-user 
+              [user]="users[2]"
+              (select)="onSelectUser($event)"
+          />
+      </ul>
+      <ul>
+          <app-user 
+              [user]="users[3]"
+              (select)="onSelectUser($event)"
+          />
+      </ul>
+    </ul>
+
+    <div class="tasks">
+      <app-tasks [name]="selectedUser.name" />
+    </div>
+  </div>
+</main> -->
+<!-- -------------------------------------------------- -->
+
+
+<!-- ---------------@for, @if, @else Modern Angular ----------------------- -->
+<main>
+  <div class="content">
+
+    <ul id="users" >
+      @for (user of users; track user.id){
+        <ul >
+            <app-user [user]="user"
+              (select)="onSelectUser($event)" />
+        </ul>
+      }
+    </ul>
+
+    <div class="tasks">
+      @if(selectedUser){
+          <h2><app-tasks [userId]="selectedUser!.id" [name]="selectedUser!.name"/></h2>
+      }@else {
+          <p>Select the user to get details!!</p> 
+      }
+    </div>
+  </div>
+</main>
+<!-- ----------------------------------------------------------------->
+
+
+<!-- --------------ngFor and ngIF Older Angular Concepts ----------------->
+<!-- <main>
+  <div class="content">
+    <ul id="users">
+       <ul *ngFor="let user of users">
+            <app-user 
+                [user]="user" (select)="onSelectUser($event)"
+            />
+        </ul>
+    </ul>
+
+    <div class="tasks">
+           <app-tasks *ngIf="selectedUser; else fallBack" [name]="selectedUser.name" />
+       <ng-template #fallBack>
+           <p>Select the user to get details!</p>
+       </ng-template>
+    </div>
+  </div>
+</main> -->
+<!-- -------------------------------------------------------------- -->

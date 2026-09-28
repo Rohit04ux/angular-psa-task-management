@@ -1,0 +1,64 @@
+<div>
+    <button (click)="onSelectedUser()"> <!-- Event Binding -->
+        
+        <!-- Property Binding -->
+            <!-- <img 
+                [src]="'users/' + selectedUser.avatar"
+                [alt]="selectedUser.name"
+            /> -->
+            
+            <!-- using getter method -->
+                <!-- <img 
+                    [src]="imagePath"
+                    [alt]="selectedUser.name"
+                /> -->
+
+            <!-- Interpolation -->
+            <!-- <span>{{ selectedUser.name }}</span> -->
+        <!-- -------------------------------------------- -->
+
+
+        <!-------------- using signal---------------- -->
+         <!-- <img 
+            [src]="imagePath()"
+            [alt]="selectedUser().name"
+         />
+        <span>{{ selectedUser().name }}</span> -->
+        <!-- ------------------------------------------ -->
+
+
+        <!----------- using @input decorator----------->
+        <!-- <img 
+            [src]="imagePath"
+            [alt]="name"
+        />
+        <span>{{name }}</span> -->
+        <!-- -------------------------------- -->
+
+        <!----------- using input (signal) ------- -->
+        <!-- <img 
+            [src]="imagePath()"
+            [alt]="name()"
+        />
+        <span>{{name()}}</span> -->
+        <!-- -------------------------------- -->
+
+
+         <!-----------  ------- -->
+        <!-- <img 
+            [src]="imagePath"
+            [alt]="name"
+        />
+        <span>{{name}}</span> -->
+        <!-- -------------------------------- -->
+
+
+        <!-----------  ------- -->
+        <img 
+            [src]="imagePath"
+            [alt]="user.name"
+        />
+        <span>{{user.name}}</span>
+        <!-- -------------------------------- -->
+    </button>
+</div>
