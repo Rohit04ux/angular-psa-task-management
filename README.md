@@ -1,4 +1,5 @@
-# For live preview check: https://stackblitz.com/github/Rohit04ux/angular-psa-task-management?file=README.md&utm_source=chatgpt.com
+# For preview check: 
+url: https://stackblitz.com/github/Rohit04ux/angular-psa-task-management?file=README.md&utm_source=chatgpt.com
 
 # FirtAngularApp
 
